@@ -114,12 +114,13 @@ const Wrapper = styled.div`
     width: 80%;
   }
   button {
-    padding: 1rem 2rem;
-    font-size: 2rem;
+    padding: 0.5rem 2rem;
+    font-size: 1.2rem;
     /* margin-top: 5rem; */
-    border-radius: 1rem;
+    border-radius: 8px;
     border: 0px solid black;
     cursor: pointer;
+    width: 200px;
   }
   .venue-container {
     background-color: red;
