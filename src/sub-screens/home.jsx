@@ -73,11 +73,11 @@ const Wrapper = styled.div`
     text-align: center;
   }
   .header {
-    font-size: 5rem;
+    font-size: 4rem;
     color: whitesmoke;
   }
   .theme {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     color: whitesmoke;
   }
   .countdown {
@@ -124,11 +124,11 @@ const Wrapper = styled.div`
     color: whitesmoke;
   }
   .theme {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     color: whitesmoke;
   }
   .countdown {
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: whitesmoke;
     background-color: rgba(43, 25, 36, 0.6);
     padding: 2rem;
@@ -141,7 +141,7 @@ const Wrapper = styled.div`
   }
   .info {
     margin: 2rem 0;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     color: whitesmoke;
     font-style: italic;
   }
