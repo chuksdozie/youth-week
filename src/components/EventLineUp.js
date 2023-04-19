@@ -18,11 +18,13 @@ const EventLineUp = () => {
         icon={<MdOutlineFaceRetouchingOff />}
       >
         <h3 className="vertical-timeline-element-title">Monday</h3>
-        {/* <h4 className="vertical-timeline-element-subtitle">Miami, FL</h4>
+        <h4 className="vertical-timeline-element-subtitle">
+          Church Auditorium
+        </h4>
         <p>
-          Creative Direction, User Experience, Visual Design, Project
-          Management, Team Leading
-        </p> */}
+          Youths and teenagers are encouraged to attend to represent their home
+          fellowships.
+        </p>
       </VerticalTimelineElement>
       <VerticalTimelineElement
         className="vertical-timeline-element--work"
