@@ -55,7 +55,7 @@ const EventLineUp = () => {
         <h4 className="vertical-timeline-element-subtitle">
           Church Auditorium
         </h4>
-        <p>Interactive</p>
+        <p>Interactive Session on Friendships</p>
       </VerticalTimelineElement>
       <VerticalTimelineElement
         className="vertical-timeline-element--work"
@@ -66,11 +66,11 @@ const EventLineUp = () => {
         icon={<MdOutlineFaceRetouchingOff />}
       >
         <h3 className="vertical-timeline-element-title">Friday</h3>
-        {/* <h4 className="vertical-timeline-element-subtitle">Miami, FL</h4>
-        <p>
-          Creative Direction, User Experience, Visual Design, Project
-          Management, Team Leading
-        </p> */}
+        <h4 className="vertical-timeline-element-subtitle">
+          Church Auditorium
+        </h4>
+        <p>Prayers</p>
+        <p>Theme: Pray until something happens.</p>
       </VerticalTimelineElement>
       <VerticalTimelineElement
         className="vertical-timeline-element--work"
@@ -81,13 +81,13 @@ const EventLineUp = () => {
         icon={<MdOutlineFaceRetouchingOff />}
       >
         <h3 className="vertical-timeline-element-title">Saturday</h3>
-        {/* <h4 className="vertical-timeline-element-subtitle">
-          San Francisco, CA
+        <h4 className="vertical-timeline-element-subtitle">
+          Location not specified yet
         </h4>
         <p>
-          Creative Direction, User Experience, Visual Design, SEO, Online
-          Marketing
-        </p> */}
+          Picnic - Hookup sessions, Indoor and outdoor games, prizes and lots
+          more
+        </p>
       </VerticalTimelineElement>
       <VerticalTimelineElement
         className="vertical-timeline-element--work"
@@ -98,8 +98,14 @@ const EventLineUp = () => {
         icon={<MdOutlineFaceRetouchingOff />}
       >
         <h3 className="vertical-timeline-element-title">Sunday</h3>
-        {/* <h4 className="vertical-timeline-element-subtitle">Los Angeles, CA</h4>
-        <p>User Experience, Visual Design</p> */}
+        <h4 className="vertical-timeline-element-subtitle">
+          Church Auditorium
+        </h4>
+        <p>Thanksgiving Service</p>
+        <p>
+          The word, Drama, Worship, Raffle draw, lot&apos;s of prizes to be won
+          ...
+        </p>
       </VerticalTimelineElement>
       {/* <VerticalTimelineElement
         className="vertical-timeline-element--work"

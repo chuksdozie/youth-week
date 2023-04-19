@@ -35,9 +35,12 @@ const Home = () => {
         <h1 className="header">AYF National Youth Week</h1>
         <text className="theme">Theme: Born Identity (Jer. 1: 5)</text>
         <div className="line"></div>
-        <div className="countdown">{countdown}</div>
+        <div className="countdown">
+          <text>Time to Event:</text>
+          <text>{countdown}</text>
+          <button>Register</button>
+        </div>
         <text className="theme">May 8th - 14th 2023</text>
-        <text className="info">More details shortly, please check back...</text>
       </div>
       <div className="venue-container">
         {/* with background image */}
@@ -90,11 +93,19 @@ const Wrapper = styled.div`
     font-size: 2rem;
     color: whitesmoke;
     background-color: rgba(43, 25, 36, 0.6);
-    padding: 2rem;
+    /* padding: 1rem; */
     border-radius: 1rem;
     min-width: 50%;
     text-align: center;
     margin-bottom: 1rem;
+    display: flex;
+    gap: 1rem;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    @media (max-width: 512px) {
+      flex-direction: column;
+    }
   }
   .line {
     border: 0.1rem solid whitesmoke;
@@ -103,9 +114,9 @@ const Wrapper = styled.div`
     width: 80%;
   }
   button {
-    padding: 1rem;
+    padding: 1rem 2rem;
     font-size: 2rem;
-    margin-top: 5rem;
+    /* margin-top: 5rem; */
     border-radius: 1rem;
     border: 0px solid black;
     cursor: pointer;
