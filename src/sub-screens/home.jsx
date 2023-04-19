@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import { MdOutlineLocalActivity, MdOutlineShareLocation } from "react-icons/md";
 import EventLineUp from "@/components/EventLineUp";
+import Link from "next/link";
 
 const Home = () => {
   const [countdown, setCountdown] = useState("00:00:00");
@@ -38,7 +39,9 @@ const Home = () => {
         <div className="countdown">
           <text>Time to Event:</text>
           <text>{countdown}</text>
-          <button>Register</button>
+          <Link href={"https://forms.gle/WyNgX65CaPYdiPjMA"} target="_blank">
+            <button>Register</button>
+          </Link>
         </div>
         <text className="theme">May 8th - 14th 2023</text>
       </div>
