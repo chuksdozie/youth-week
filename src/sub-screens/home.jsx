@@ -43,7 +43,7 @@ const Home = () => {
             <button>Register</button>
           </Link>
         </div>
-        <text>Mon. May 8th - Sun. 14th 2023</text>
+        <text className="date">Mon. May 8th - Sun. 14th 2023</text>
       </div>
       <div className="venue-container">
         {/* with background image */}
@@ -93,7 +93,7 @@ const Wrapper = styled.div`
     color: whitesmoke;
   }
   .date {
-    font-size: 1rem;
+    font-size: 0.8rem;
     color: whitesmoke;
   }
   .countdown {
