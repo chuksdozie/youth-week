@@ -43,7 +43,7 @@ const Home = () => {
             <button>Register</button>
           </Link>
         </div>
-        <text ">Mon. May 8th - Sun. 14th 2023</text>
+        <text>Mon. May 8th - Sun. 14th 2023</text>
       </div>
       <div className="venue-container">
         {/* with background image */}
