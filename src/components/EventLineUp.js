@@ -13,7 +13,7 @@ const EventLineUp = () => {
         className="vertical-timeline-element--work"
         contentStyle={{ background: "#4287f5", color: "#fff" }}
         contentArrowStyle={{ borderRight: "7px solid  rgb(33, 150, 243)" }}
-        date="8th May, 2023"
+        date="8th May, 2023 - 5:30pm"
         iconStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
         icon={<MdOutlineFaceRetouchingOff />}
       >
@@ -28,7 +28,7 @@ const EventLineUp = () => {
       </VerticalTimelineElement>
       <VerticalTimelineElement
         className="vertical-timeline-element--work"
-        date="10th May, 2023"
+        date="10th May, 2023 - 6pm"
         contentArrowStyle={{ borderRight: "7px solid  #f5a742" }}
         contentStyle={{ background: "#f5a742", color: "#fff" }}
         iconStyle={{ background: "#f5a742", color: "#fff" }}
@@ -45,7 +45,7 @@ const EventLineUp = () => {
       </VerticalTimelineElement>
       <VerticalTimelineElement
         className="vertical-timeline-element--work"
-        date="11th May, 2023"
+        date="11th May, 2023 - 5pm"
         contentArrowStyle={{ borderRight: "7px solid  #c542f5" }}
         contentStyle={{ background: "#c542f5", color: "#fff" }}
         iconStyle={{ background: "#c542f5", color: "#fff" }}
@@ -61,7 +61,7 @@ const EventLineUp = () => {
         className="vertical-timeline-element--work"
         contentStyle={{ background: "#4287f5", color: "#fff" }}
         contentArrowStyle={{ borderRight: "7px solid  rgb(33, 150, 243)" }}
-        date="12th May, 2023"
+        date="12th May, 2023 - 5pm"
         iconStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
         icon={<MdOutlineFaceRetouchingOff />}
       >
@@ -74,7 +74,7 @@ const EventLineUp = () => {
       </VerticalTimelineElement>
       <VerticalTimelineElement
         className="vertical-timeline-element--work"
-        date="13th May, 2023"
+        date="13th May, 2023 - 10am"
         contentArrowStyle={{ borderRight: "7px solid  #f5a742" }}
         contentStyle={{ background: "#f5a742", color: "#fff" }}
         iconStyle={{ background: "#f5a742", color: "#fff" }}
@@ -91,7 +91,7 @@ const EventLineUp = () => {
       </VerticalTimelineElement>
       <VerticalTimelineElement
         className="vertical-timeline-element--work"
-        date="14th May, 2023"
+        date="14th May, 2023 - 7am"
         contentArrowStyle={{ borderRight: "7px solid  #c542f5" }}
         contentStyle={{ background: "#c542f5", color: "#fff" }}
         iconStyle={{ background: "#c542f5", color: "#fff" }}
