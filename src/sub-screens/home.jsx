@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
-import { MdOutlineShareLocation } from "react-icons/md";
+import { MdOutlineLocalActivity, MdOutlineShareLocation } from "react-icons/md";
+import EventLineUp from "@/components/EventLineUp";
 
 const Home = () => {
   const [countdown, setCountdown] = useState("00:00:00");
@@ -40,11 +41,16 @@ const Home = () => {
       </div>
       <div className="venue-container">
         {/* with background image */}
+        <div className="spacer"></div>
         <MdOutlineShareLocation className="icon" size={70} color="whitesmoke" />
         <text className="theme">
           St. Matthew&apos;s Anglican Church, Nkpogwu
         </text>
         <text className="theme">Port Harcourt</text>
+        <div className="spacer"></div>
+        <MdOutlineLocalActivity className="icon" size={70} color="whitesmoke" />
+        <text className="theme">Activities for the Week</text>
+        <EventLineUp />
       </div>
     </Wrapper>
   );
@@ -73,7 +79,7 @@ const Wrapper = styled.div`
     text-align: center;
   }
   .header {
-    font-size: 4rem;
+    font-size: 2rem;
     color: whitesmoke;
   }
   .theme {
@@ -107,7 +113,7 @@ const Wrapper = styled.div`
   .venue-container {
     background-color: red;
     padding: 1rem;
-    background: url("group-young-black-people.webp");
+    background: url("church.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -144,5 +150,8 @@ const Wrapper = styled.div`
     font-size: 1.2rem;
     color: whitesmoke;
     font-style: italic;
+  }
+  .spacer {
+    margin: 2rem 0;
   }
 `;
