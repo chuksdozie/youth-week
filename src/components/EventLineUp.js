@@ -35,13 +35,13 @@ const EventLineUp = () => {
         icon={<MdOutlineFaceRetouchingOff />}
       >
         <h3 className="vertical-timeline-element-title">Wednesday</h3>
-        {/* <h4 className="vertical-timeline-element-subtitle">
-          San Francisco, CA
+        <h4 className="vertical-timeline-element-subtitle">
+          Various Home Fellowship Centers
         </h4>
         <p>
-          Creative Direction, User Experience, Visual Design, SEO, Online
-          Marketing
-        </p> */}
+          To be anchored by youths and teenagers in their various home
+          fellowship centers.
+        </p>
       </VerticalTimelineElement>
       <VerticalTimelineElement
         className="vertical-timeline-element--work"
@@ -52,8 +52,10 @@ const EventLineUp = () => {
         icon={<MdOutlineFaceRetouchingOff />}
       >
         <h3 className="vertical-timeline-element-title">Thursday</h3>
-        {/* <h4 className="vertical-timeline-element-subtitle">Los Angeles, CA</h4>
-        <p>User Experience, Visual Design</p> */}
+        <h4 className="vertical-timeline-element-subtitle">
+          Church Auditorium
+        </h4>
+        <p>Interactive</p>
       </VerticalTimelineElement>
       <VerticalTimelineElement
         className="vertical-timeline-element--work"
