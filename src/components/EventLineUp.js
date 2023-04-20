@@ -22,8 +22,8 @@ const EventLineUp = () => {
           Church Auditorium
         </h4>
         <p>
-          Youths and teenagers are encouraged to attend to represent their home
-          fellowships.
+          Home Fellowship Preparatoty - Youths and teenagers are encouraged to
+          attend to represent their home fellowships.
         </p>
       </VerticalTimelineElement>
       <VerticalTimelineElement
@@ -39,8 +39,8 @@ const EventLineUp = () => {
           Various Home Fellowship Centers
         </h4>
         <p>
-          To be anchored by youths and teenagers in their various home
-          fellowship centers.
+          Home Fellowship - To be anchored by youths and teenagers in their
+          various home fellowship centers.
         </p>
       </VerticalTimelineElement>
       <VerticalTimelineElement
