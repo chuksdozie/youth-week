@@ -36,7 +36,7 @@ const EventLineUp = () => {
       >
         <h3 className="vertical-timeline-element-title">Wednesday</h3>
         <h4 className="vertical-timeline-element-subtitle">
-          Various Home Fellowship Centers
+          Home Fellowship Centers
         </h4>
         <p>
           Home Fellowship - To be anchored by youths and teenagers in their
@@ -69,8 +69,8 @@ const EventLineUp = () => {
         <h4 className="vertical-timeline-element-subtitle">
           Church Auditorium
         </h4>
+        <p>Theme: Time With The Lord.</p>
         <p>Prayers</p>
-        <p>Theme: Pray until something happens.</p>
       </VerticalTimelineElement>
       <VerticalTimelineElement
         className="vertical-timeline-element--work"
@@ -82,7 +82,7 @@ const EventLineUp = () => {
       >
         <h3 className="vertical-timeline-element-title">Saturday</h3>
         <h4 className="vertical-timeline-element-subtitle">
-          Location not specified yet
+          Christian Council, Nkpogwu
         </h4>
         <p>
           Picnic - Hookup sessions, Indoor and outdoor games, prizes and lots
@@ -103,8 +103,8 @@ const EventLineUp = () => {
         </h4>
         <p>Thanksgiving Service</p>
         <p>
-          The word, Drama, Worship, Raffle draw, lot&apos;s of prizes to be won
-          ...
+          The word, Intercession, Worship, Raffle draw, lot&apos;s of prizes to
+          be won ...
         </p>
       </VerticalTimelineElement>
       {/* <VerticalTimelineElement

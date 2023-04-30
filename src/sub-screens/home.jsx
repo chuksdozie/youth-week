@@ -1,8 +1,11 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
+import { AiOutlinePicture } from "react-icons/ai";
 import { MdOutlineLocalActivity, MdOutlineShareLocation } from "react-icons/md";
 import EventLineUp from "@/components/EventLineUp";
 import Link from "next/link";
+import ReactImageGallery from "react-image-gallery";
+import { images } from "@/assets/photos";
 
 const Home = () => {
   const [countdown, setCountdown] = useState("00:00:00");
@@ -53,6 +56,14 @@ const Home = () => {
           St. Matthew&apos;s Anglican Church, Nkpogwu
         </text>
         <text className="theme">Port Harcourt</text>
+        <text className="theme-sub">GOSHEN CAMP</text>
+        <div className="spacer"></div>
+        <div className="spacer"></div>
+        <AiOutlinePicture className="icon" size={70} color="whitesmoke" />
+        <text className="theme">Event Gallery</text>
+        <div className="spacer"></div>
+        <ReactImageGallery items={images} infinite autoPlay />
+
         <div className="spacer"></div>
         <MdOutlineLocalActivity className="icon" size={70} color="whitesmoke" />
         <text className="theme">Activities for the Week</text>
@@ -91,6 +102,12 @@ const Wrapper = styled.div`
   .theme {
     font-size: 1.2rem;
     color: whitesmoke;
+  }
+  .theme-sub {
+    font-size: 1.2rem;
+    color: whitesmoke;
+    margin-top: 1rem;
+    font-weight: 600;
   }
   .date {
     font-size: 0.8rem;
