@@ -59,8 +59,8 @@ const Home = () => {
         </text>
         <text className="theme">Port Harcourt</text>
         <text className="theme-sub">GOSHEN CAMP</text>
-        <div className="spacer"></div>
-        <div className="spacer"></div>
+        {/* <div className="spacer"></div>
+        <div className="spacer"></div> */}
         {/* <AiOutlinePicture className="icon" size={70} color="whitesmoke" /> */}
         {/* <text className="theme">Event Gallery</text> */}
         {/* <div className="spacer"></div> */}
