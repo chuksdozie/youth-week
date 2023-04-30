@@ -61,7 +61,7 @@ const Home = () => {
         <text className="theme-sub">GOSHEN CAMP</text>
         <div className="spacer"></div>
         <div className="spacer"></div>
-        <AiOutlinePicture className="icon" size={70} color="whitesmoke" />
+        {/* <AiOutlinePicture className="icon" size={70} color="whitesmoke" /> */}
         {/* <text className="theme">Event Gallery</text> */}
         {/* <div className="spacer"></div> */}
         {/* <ReactImageGallery items={images} infinite autoPlay /> */}
