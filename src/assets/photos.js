@@ -1,30 +1,44 @@
 export const images = [
   {
-    original: "https://picsum.photos/id/1018/1000/600/",
+    original: "https://picsum.photos/1018",
     thumbnail: "https://picsum.photos/id/1018/250/150/",
+    // originalHeight: "auto",
+    // originalWidth: "100vw",
   },
   {
-    original: "https://picsum.photos/id/1015/1000/600/",
-    thumbnail: "https://picsum.photos/id/1015/250/150/",
+    original: "https://picsum.photos/1018",
+    thumbnail: "https://picsum.photos/id/1018/250/150/",
+    // originalHeight: "auto",
+    // originalWidth: "100vw",
   },
   {
-    original: "https://picsum.photos/id/1019/1000/600/",
-    thumbnail: "https://picsum.photos/id/1019/250/150/",
+    original: "https://picsum.photos/1018",
+    thumbnail: "https://picsum.photos/id/1018/250/150/",
+    // originalHeight: "auto",
+    // originalWidth: "100vw",
   },
   {
-    original: "https://picsum.photos/id/1019/1000/600/",
-    thumbnail: "https://picsum.photos/id/1019/250/150/",
+    original: "https://picsum.photos/1018",
+    thumbnail: "https://picsum.photos/id/1018/250/150/",
+    // originalHeight: "auto",
+    // originalWidth: "100vw",
   },
-  {
-    original: "https://picsum.photos/id/1019/1000/600/",
-    thumbnail: "https://picsum.photos/id/1019/250/150/",
-  },
-  {
-    original: "https://picsum.photos/id/1019/1000/600/",
-    thumbnail: "https://picsum.photos/id/1019/250/150/",
-  },
-  {
-    original: "https://picsum.photos/id/1019/1000/600/",
-    thumbnail: "https://picsum.photos/id/1019/250/150/",
-  },
+  //   {
+  //     original: "https://picsum.photos/id/1015/300/300/",
+  //     thumbnail: "https://picsum.photos/id/1015/250/150/",
+  //     // originalHeight: "auto",
+  //     // originalWidth: "100vw",
+  //   },
+  //   {
+  //     original: "https://picsum.photos/id/1018/300/300/",
+  //     thumbnail: "https://picsum.photos/id/1018/250/150/",
+  //     // originalHeight: "auto",
+  //     // originalWidth: "100vw",
+  //   },
+  //   {
+  //     original: "https://picsum.photos/id/1015/300/300/",
+  //     thumbnail: "https://picsum.photos/id/1015/250/150/",
+  //     // originalHeight: "auto",
+  //     // originalWidth: "100vw",
+  //   },
 ];

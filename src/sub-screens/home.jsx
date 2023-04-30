@@ -6,6 +6,8 @@ import EventLineUp from "@/components/EventLineUp";
 import Link from "next/link";
 import ReactImageGallery from "react-image-gallery";
 import { images } from "@/assets/photos";
+import { Gallery } from "react-grid-gallery";
+import { Carousel } from "react-responsive-carousel";
 
 const Home = () => {
   const [countdown, setCountdown] = useState("00:00:00");
@@ -60,10 +62,24 @@ const Home = () => {
         <div className="spacer"></div>
         <div className="spacer"></div>
         <AiOutlinePicture className="icon" size={70} color="whitesmoke" />
-        <text className="theme">Event Gallery</text>
-        <div className="spacer"></div>
-        <ReactImageGallery items={images} infinite autoPlay />
-
+        {/* <text className="theme">Event Gallery</text> */}
+        {/* <div className="spacer"></div> */}
+        {/* <ReactImageGallery items={images} infinite autoPlay /> */}
+        {/* <Gallery images={images} /> */}
+        {/* <Carousel>
+          <div>
+            <img src="https://picsum.photos/1018" />
+            <p className="legend">Legend 1</p>
+          </div>
+          <div>
+            <img src="https://picsum.photos/1018" />
+            <p className="legend">Legend 2</p>
+          </div>
+          <div>
+            <img src="https://picsum.photos/1018" />
+            <p className="legend">Legend 3</p>
+          </div>
+        </Carousel> */}
         <div className="spacer"></div>
         <MdOutlineLocalActivity className="icon" size={70} color="whitesmoke" />
         <text className="theme">Activities for the Week</text>
@@ -160,6 +176,8 @@ const Wrapper = styled.div`
     align-items: center;
     box-shadow: inset 0 0 0 50vw rgba(3, 3, 3, 0.9);
     text-align: center;
+    cursor: pointer;
+    width: 100vw;
   }
   .venue {
     font-size: 2rem;
