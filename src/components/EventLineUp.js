@@ -82,7 +82,7 @@ const EventLineUp = () => {
       >
         <h3 className="vertical-timeline-element-title">Saturday</h3>
         <h4 className="vertical-timeline-element-subtitle">
-          Christian Council, Nkpogwu
+          Christian Council, Elekahia
         </h4>
         <p>
           Picnic - Hookup sessions, Indoor and outdoor games, prizes and lots
