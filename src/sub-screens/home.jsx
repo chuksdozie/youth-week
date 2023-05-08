@@ -11,6 +11,7 @@ import { Carousel } from "react-responsive-carousel";
 
 const Home = () => {
   const [countdown, setCountdown] = useState("00:00:00");
+  const [countup, setCountup] = useState("00:00:00");
 
   useEffect(() => {
     const eventDate = new Date("2023-05-08T00:00:00");
@@ -27,8 +28,26 @@ const Home = () => {
       setCountdown(`${days}d ${hours}h ${minutes}m ${seconds}s`);
       if (distance < 0) {
         clearInterval(interval);
-        setCountdown("EXPIRED");
+        setCountdown("ENDED");
       }
+    }, 1000);
+    return () => clearInterval(interval);
+  }, []);
+
+  useEffect(() => {
+    const eventDate = new Date("2023-05-08T00:00:00");
+    let startTime = new Date().getTime();
+    const interval = setInterval(() => {
+      const currentTime = new Date().getTime();
+      const distance = currentTime - eventDate;
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor(
+        (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+      );
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+      setCountup(`${days}d ${hours}h ${minutes}m ${seconds}s`);
+      startTime = currentTime;
     }, 1000);
     return () => clearInterval(interval);
   }, []);
@@ -42,8 +61,8 @@ const Home = () => {
         <text className="theme">Theme: Born Identity (Jer. 1: 5)</text>
         <div className="line"></div>
         <div className="countdown">
-          <text>Time to Event:</text>
-          <text>{countdown}</text>
+          <text>Days into Event:</text>
+          <text>{countup}</text>
           <Link href={"https://forms.gle/WyNgX65CaPYdiPjMA"} target="_blank">
             <button>Register</button>
           </Link>
