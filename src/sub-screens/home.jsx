@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import { AiOutlinePicture } from "react-icons/ai";
 import { MdOutlineLocalActivity, MdOutlineShareLocation } from "react-icons/md";
+import { FaGamepad } from "react-icons/fa";
 import EventLineUp from "@/components/EventLineUp";
 import Link from "next/link";
 import ReactImageGallery from "react-image-gallery";
@@ -12,6 +13,10 @@ import { Carousel } from "react-responsive-carousel";
 const Home = () => {
   const [countdown, setCountdown] = useState("00:00:00");
   const [countup, setCountup] = useState("00:00:00");
+  const [randomNumber, setRandomNumber] = useState(
+    Math.floor(Math.random() * 100) + 1
+  );
+  // const randomNumber = Math.floor(Math.random() * 100) + 1;
 
   useEffect(() => {
     const eventDate = new Date("2023-05-08T00:00:00");
@@ -78,6 +83,15 @@ const Home = () => {
         </text>
         <text className="theme">Port Harcourt</text>
         <text className="theme-sub">GOSHEN CAMP</text>
+        <div className="spacer"></div>
+        <FaGamepad className="icon" size={70} color="whitesmoke" />
+        <text className="theme">Pick a Random Number</text>
+        <text className="number">{randomNumber}</text>
+        <button
+          onClick={() => setRandomNumber(Math.floor(Math.random() * 100) + 1)}
+        >
+          Generate New Number
+        </button>
         {/* <div className="spacer"></div>
         <div className="spacer"></div> */}
         {/* <AiOutlinePicture className="icon" size={70} color="whitesmoke" /> */}
@@ -140,6 +154,12 @@ const Wrapper = styled.div`
   }
   .theme-sub {
     font-size: 1.2rem;
+    color: whitesmoke;
+    margin-top: 1rem;
+    font-weight: 600;
+  }
+  .number {
+    font-size: 6.2rem;
     color: whitesmoke;
     margin-top: 1rem;
     font-weight: 600;
