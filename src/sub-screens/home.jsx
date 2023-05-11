@@ -13,9 +13,7 @@ import { Carousel } from "react-responsive-carousel";
 const Home = () => {
   const [countdown, setCountdown] = useState("00:00:00");
   const [countup, setCountup] = useState("00:00:00");
-  const [randomNumber, setRandomNumber] = useState(
-    Math.floor(Math.random() * 100) + 1
-  );
+  const [randomNumber, setRandomNumber] = useState(0);
   // const randomNumber = Math.floor(Math.random() * 100) + 1;
 
   useEffect(() => {
