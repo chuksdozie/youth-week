@@ -64,11 +64,12 @@ const Home = () => {
         <text className="theme">Theme: Born Identity (Jer. 1: 5)</text>
         <div className="line"></div>
         <div className="countdown">
-          <text>Days into Event:</text>
-          <text>{countup}</text>
-          <Link href={"https://forms.gle/WyNgX65CaPYdiPjMA"} target="_blank">
+          <text>Event is over. Thanks for being part of it.</text>
+          {/* <text>Days into Event:</text> */}
+          {/* <text>{countup}</text> */}
+          {/* <Link href={"https://forms.gle/WyNgX65CaPYdiPjMA"} target="_blank">
             <button>Register</button>
-          </Link>
+          </Link> */}
         </div>
         <text className="date">Mon. May 8th - Sun. 14th 2023</text>
       </div>
