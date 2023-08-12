@@ -57,15 +57,24 @@ const Home = () => {
 
   return (
     <Wrapper>
+      {/* Home */}
+      <div className="header-container">
+        {/* with background image */}
+        <h1 className="header">AYF National Youth Week</h1>
+        <text className="theme">Theme: Born Identity (Jer. 1: 5)</text>
+        <div className="line"></div>
+        <div className="countdown">
+          <text>Event is over. Thanks for being part of it.</text>
+          {/* <text>Days into Event:</text> */}
+          {/* <text>{countup}</text> */}
+          {/* <Link href={"https://forms.gle/WyNgX65CaPYdiPjMA"} target="_blank">
+            <button>Register</button>
+          </Link> */}
+        </div>
+        <text className="date">Mon. May 8th - Sun. 14th 2023</text>
+      </div>
       <div className="venue-container">
         {/* with background image */}
-        <div className="spacer"></div>
-        <MdOutlineShareLocation className="icon" size={70} color="whitesmoke" />
-        <text className="theme">AYF Anniversary 2023</text>
-        <text className="theme">Youth With A Difference</text>
-        <text className="theme">Dan 1 : 8</text>
-        {/* <text className="theme-sub">GOSHEN CAMP</text> */}
-
         <div className="spacer"></div>
         <MdOutlineShareLocation className="icon" size={70} color="whitesmoke" />
         <text className="theme">
@@ -78,7 +87,7 @@ const Home = () => {
         <text className="theme">Pick a Random Number</text>
         <text className="number">{randomNumber}</text>
         <button
-          onClick={() => setRandomNumber(Math.floor(Math.random() * 200) + 1)}
+          onClick={() => setRandomNumber(Math.floor(Math.random() * 100) + 1)}
         >
           Generate New Number
         </button>
@@ -104,9 +113,9 @@ const Home = () => {
           </div>
         </Carousel> */}
         <div className="spacer"></div>
-        {/* <MdOutlineLocalActivity className="icon" size={70} color="whitesmoke" /> */}
-        {/* <text className="theme">Activities for the Week</text> */}
-        {/* <EventLineUp /> */}
+        <MdOutlineLocalActivity className="icon" size={70} color="whitesmoke" />
+        <text className="theme">Activities for the Week</text>
+        <EventLineUp />
       </div>
     </Wrapper>
   );
