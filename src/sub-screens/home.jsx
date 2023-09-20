@@ -9,6 +9,7 @@ import ReactImageGallery from "react-image-gallery";
 import { images } from "@/assets/photos";
 import { Gallery } from "react-grid-gallery";
 import { Carousel } from "react-responsive-carousel";
+import DownloadFile from "@/components/DownloadFile";
 
 const Home = () => {
   const [countdown, setCountdown] = useState("00:00:00");
@@ -57,6 +58,7 @@ const Home = () => {
 
   return (
     <Wrapper>
+      <DownloadFile />
       <div className="venue-container">
         {/* with background image */}
         <div className="spacer"></div>
