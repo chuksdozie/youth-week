@@ -10,14 +10,6 @@ import { images } from "@/assets/photos";
 import { Gallery } from "react-grid-gallery";
 import { Carousel } from "react-responsive-carousel";
 import DownloadFile from "@/components/DownloadFile";
-import Navbar from "@/layout/Navbar";
-import Banner from "@/layout/Banner";
-import Speakers from "@/layout/Speakers";
-import colors from "@/constants/colors";
-import Sponsors from "@/layout/Sponsors";
-import LuckyDipCorner from "@/layout/LuckyDipCorner";
-import Share from "@/layout/Share";
-import Footer from "@/layout/Footer";
 
 const Home = () => {
   const [countdown, setCountdown] = useState("00:00:00");
@@ -66,19 +58,58 @@ const Home = () => {
 
   return (
     <Wrapper>
-      {/* <DownloadFile /> */}
-      <Navbar />
-      <Banner />
-      <h1 style={{ color: colors.white }}>date and time and venue</h1>
+      <DownloadFile />
+      <div className="venue-container">
+        {/* with background image */}
+        <div className="spacer"></div>
+        <MdOutlineShareLocation className="icon" size={70} color="whitesmoke" />
+        <text className="theme">AYF Anniversary 2023</text>
+        <text className="theme">Youth With A Difference</text>
+        <text className="theme">Dan 1 : 8</text>
+        {/* <text className="theme-sub">GOSHEN CAMP</text> */}
 
-      <h1 style={{ color: colors.white }}>countdown component</h1>
-
-      <Speakers />
-      <h1 style={{ color: colors.white }}>countdown component</h1>
-      <LuckyDipCorner />
-      <Share />
-      <Sponsors />
-      <Footer />
+        <div className="spacer"></div>
+        <MdOutlineShareLocation className="icon" size={70} color="whitesmoke" />
+        <text className="theme">
+          St. Matthew&apos;s Anglican Church, Nkpogwu
+        </text>
+        <text className="theme">Port Harcourt</text>
+        <text className="theme-sub">GOSHEN CAMP</text>
+        <div className="spacer"></div>
+        <FaGamepad className="icon" size={70} color="whitesmoke" />
+        <text className="theme">Pick a Random Number</text>
+        <text className="number">{randomNumber}</text>
+        <button
+          onClick={() => setRandomNumber(Math.floor(Math.random() * 200) + 1)}
+        >
+          Generate New Number
+        </button>
+        {/* <div className="spacer"></div>
+        <div className="spacer"></div> */}
+        {/* <AiOutlinePicture className="icon" size={70} color="whitesmoke" /> */}
+        {/* <text className="theme">Event Gallery</text> */}
+        {/* <div className="spacer"></div> */}
+        {/* <ReactImageGallery items={images} infinite autoPlay /> */}
+        {/* <Gallery images={images} /> */}
+        {/* <Carousel>
+          <div>
+            <img src="https://picsum.photos/1018" />
+            <p className="legend">Legend 1</p>
+          </div>
+          <div>
+            <img src="https://picsum.photos/1018" />
+            <p className="legend">Legend 2</p>
+          </div>
+          <div>
+            <img src="https://picsum.photos/1018" />
+            <p className="legend">Legend 3</p>
+          </div>
+        </Carousel> */}
+        <div className="spacer"></div>
+        {/* <MdOutlineLocalActivity className="icon" size={70} color="whitesmoke" /> */}
+        {/* <text className="theme">Activities for the Week</text> */}
+        {/* <EventLineUp /> */}
+      </div>
     </Wrapper>
   );
 };
