@@ -6,7 +6,7 @@ import styled from "styled-components";
 const Footer = () => {
   return (
     <Wrapper>
-      <h4>CTA'S</h4>
+      <h4>CTA&apos;S</h4>
       <h4>REGISTER</h4>
       <h4>BECOME A SUB SPEAKER</h4>
       <h4>BECOME A SUB-SPEAKER</h4>
@@ -20,6 +20,7 @@ const Footer = () => {
 export default Footer;
 
 const Wrapper = styled.div`
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;

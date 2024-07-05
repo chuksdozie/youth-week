@@ -57,6 +57,7 @@ const colors = {
   purple: "#CF9FFF",
   purple50: "#E6E6FA",
   purpleDark: "#444CE7E5",
+  softBackground: "rgba(233, 233, 233, 0.31)",
 };
 
 export const profileColors = [

@@ -18,6 +18,8 @@ import Sponsors from "@/layout/Sponsors";
 import LuckyDipCorner from "@/layout/LuckyDipCorner";
 import Share from "@/layout/Share";
 import Footer from "@/layout/Footer";
+import CountDown from "@/layout/CountDown";
+import DateTime from "@/layout/DateTime";
 
 const Home = () => {
   const [countdown, setCountdown] = useState("00:00:00");
@@ -26,7 +28,7 @@ const Home = () => {
   // const randomNumber = Math.floor(Math.random() * 100) + 1;
 
   useEffect(() => {
-    const eventDate = new Date("2023-05-08T00:00:00");
+    const eventDate = new Date("2024-08-08T00:00:00");
     const now = new Date().getTime();
     const distance = eventDate - now;
     const interval = setInterval(() => {
@@ -69,12 +71,9 @@ const Home = () => {
       {/* <DownloadFile /> */}
       <Navbar />
       <Banner />
-      <h1 style={{ color: colors.white }}>date and time and venue</h1>
-
-      <h1 style={{ color: colors.white }}>countdown component</h1>
-
+      <DateTime />
       <Speakers />
-      <h1 style={{ color: colors.white }}>countdown component</h1>
+      <CountDown />
       <LuckyDipCorner />
       <Share />
       <Sponsors />
@@ -86,9 +85,12 @@ const Home = () => {
 export default Home;
 
 const Wrapper = styled.div`
-  width: 100%;
+  width: 100vw;
   min-height: 100vh;
-  background-color: #130c00;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
   .header-container {
     background-color: red;

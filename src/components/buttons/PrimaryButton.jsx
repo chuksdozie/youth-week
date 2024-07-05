@@ -15,10 +15,10 @@ export default PrimaryButton;
 
 const Wrapper = styled.div`
   color: ${colors.white};
-  background-color: ${colors.warning700};
+  background-color: ${colors.black};
   width: max-content;
   /* max-height: 30px; */
-  padding: 0.5rem 1rem;
-  border-radius: 5px;
-  font-size: ${fontSizes.m};
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  font-size: ${fontSizes.s};
 `;
