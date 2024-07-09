@@ -26,6 +26,7 @@ const BannerFixChat = () => {
         width={isMobile ? 800 : 1920}
         height={isMobile ? 400 : 1080}
         style={{ objectFit: "cover", position: "relative", width: "100%" }}
+        loading="eager"
       />
     </BannerContainer>
   );
