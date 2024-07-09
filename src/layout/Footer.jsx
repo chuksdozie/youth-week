@@ -56,8 +56,8 @@ const Wrapper = styled.div`
     /* width: 450px; */
   }
   p {
-    font-size: ${fontSizes.xs};
-    margin: 0.5rem 0;
+    font-size: ${fontSizes.m};
+    margin: 1rem 0;
     :hover {
       cursor: pointer;
       color: ${colors.warning200};
