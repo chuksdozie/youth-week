@@ -5,6 +5,8 @@ import React from "react";
 import styled from "styled-components";
 import { Alegreya_Sans } from "next/font/google";
 import Image from "next/image";
+import { useMatchMediaQuery } from "@/hooks/viewports.hook";
+import device from "@/constants/breakpoints";
 
 const alg = Alegreya_Sans({
   subsets: ["latin"],
@@ -13,9 +15,18 @@ const alg = Alegreya_Sans({
 });
 
 const BannerFixChat = () => {
+  const isMobile = useMatchMediaQuery(device.mobile);
   return (
     <BannerContainer className={alg.className}>
-      <img src="/random/banner.svg" alt="" style={{ width: "100%" }} />
+      <Image
+        // x
+        src="/random/banner.svg"
+        alt="Banner"
+        // fill
+        width={isMobile ? 800 : 1920}
+        height={isMobile ? 400 : 1080}
+        style={{ objectFit: "cover", position: "relative", width: "100%" }}
+      />
     </BannerContainer>
   );
 };
