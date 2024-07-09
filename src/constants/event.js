@@ -37,7 +37,7 @@ Hobbies: Gaming, Movies, Research`,
       "Senior software engineer with over 5 years of experience in the tech industry. Holds a Bachelor's degree in Computer Science from the University of Nigeria. Specializes in Full-stack development, leading teams to develop and deploy robust applications. Notable achievements include building a health solution, developing a financial bank solution, and serving as the lead engineer at several startups. Thrives in dynamic environments, leveraging skills in problem-solving, architectural design, and team collaboration to deliver innovative solutions.",
   },
   {
-    pic: "/speakers/tochi.jpg",
+    pic: "/speakers/Tochi.jpg",
     name: "Tochi Nwachukwu",
     title: "Lead Technical Assessor",
     details:
