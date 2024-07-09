@@ -1,13 +1,16 @@
 import PrimaryButton from "@/components/buttons/PrimaryButton";
+import device from "@/constants/breakpoints";
 import colors from "@/constants/colors";
 import { event } from "@/constants/event";
 import fontSizes from "@/constants/fontSizes";
+import { useMatchMediaQuery } from "@/hooks/viewports.hook";
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 
 const Share = () => {
+  const isMobile = useMatchMediaQuery(device.mobile);
   return (
-    <Wrapper>
+    <Wrapper $isMobile={isMobile}>
       <div className="left">
         <text>Hi</text>
         <img src="/random/hi.svg" alt="" className="rocket" />
@@ -38,6 +41,7 @@ export default Share;
 const Wrapper = styled.div`
   width: 90%;
   display: flex;
+  flex-direction: ${({ $isMobile }) => ($isMobile ? "column" : "row")};
   justify-content: center;
   align-items: center;
   /* background-color: ${colors.warning700}; */
@@ -57,21 +61,24 @@ const Wrapper = styled.div`
       font-size: ${fontSizes.xxxl};
       font-weight: bold;
       width: 250px;
-      position: absolute;
-      top: 15rem;
+      position: ${({ $isMobile }) =>
+        $isMobile ? "absolute" : "absolute"}; //absolute;
+      top: ${({ $isMobile }) => ($isMobile ? "auto" : "15rem")}; //15rem;
       left: 6rem;
       text-underline-offset: 15px;
       text-decoration: underline;
       text-decoration-thickness: 3px;
       text-decoration-color: rgba(255, 203, 103, 0.6);
+      display: ${({ $isMobile }) => ($isMobile ? "none" : "block")};
     }
     .rocket {
       width: 350px;
-      position: absolute;
+      position: ${({ $isMobile }) =>
+        $isMobile ? "relative" : "absolute"}; //absolute;
       top: 0rem;
       /* right: ; */
       /* bottom: 2rem; */
-      left: 9rem;
+      left: ${({ $isMobile }) => ($isMobile ? "auto" : "9rem")}; //9rem;
     }
     .dot1 {
       padding: 0.5rem;
@@ -94,7 +101,7 @@ const Wrapper = styled.div`
       background-color: rgba(10, 183, 6, 1);
       border-radius: 50%;
       position: absolute;
-      top: 12rem;
+      top: ${({ $isMobile }) => ($isMobile ? "25rem" : "12rem")}; //12rem;
       left: 6rem;
     }
     .dot4 {
@@ -102,7 +109,7 @@ const Wrapper = styled.div`
       background-color: rgba(241, 162, 42, 1);
       border-radius: 50%;
       position: absolute;
-      top: 10rem;
+      top: ${({ $isMobile }) => ($isMobile ? "25rem" : "10rem")};
       left: 9rem;
     }
   }

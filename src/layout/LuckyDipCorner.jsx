@@ -1,14 +1,17 @@
 import PrimaryButton from "@/components/buttons/PrimaryButton";
+import device from "@/constants/breakpoints";
 import colors from "@/constants/colors";
 import fontSizes from "@/constants/fontSizes";
+import { useMatchMediaQuery } from "@/hooks/viewports.hook";
 import React, { useState } from "react";
 import { FaGamepad } from "react-icons/fa";
 import styled from "styled-components";
 
 const LuckyDipCorner = () => {
+  const isMobile = useMatchMediaQuery(device.mobile);
   const [randomNumber, setRandomNumber] = useState(0);
   return (
-    <Wrapper>
+    <Wrapper $isMobile={isMobile}>
       <div className="back"></div>
       <img src="/random/baloons.svg" alt="" className="baloon" />
       <h4>Lucky Corner</h4>
@@ -50,6 +53,7 @@ const Wrapper = styled.div`
   p {
     color: ${colors.gray500};
     font-size: ${fontSizes.s};
+    text-align: ${({ $isMobile }) => ($isMobile ? "center" : "center")};
   }
   .back {
     background-color: rgba(255, 234, 194, 0.5);
@@ -62,17 +66,19 @@ const Wrapper = styled.div`
   .baloon {
     /* background-color: rgba(255, 234, 194, 0.5); */
     position: absolute;
-    top: -10rem;
+    top: ${({ $isMobile }) => ($isMobile ? "-11rem" : "-10rem")};
+    width: ${({ $isMobile }) => ($isMobile ? "230px" : "280px")};
     left: 0;
-    width: 280px;
+    /* width: 280px; */
   }
   .lucky {
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
-    height: 350px;
-    width: 350px;
+    height: ${({ $isMobile }) => ($isMobile ? "280px" : "350px")};
+    width: ${({ $isMobile }) => ($isMobile ? "280px" : "350px")};
+    /* width: 350px; */
     /* background-color: red; */
     margin: 3rem 0;
     .number {

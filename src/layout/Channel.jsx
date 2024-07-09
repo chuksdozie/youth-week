@@ -1,13 +1,16 @@
 import PrimaryButton from "@/components/buttons/PrimaryButton";
+import device from "@/constants/breakpoints";
 import colors from "@/constants/colors";
 import { event } from "@/constants/event";
 import fontSizes from "@/constants/fontSizes";
+import { useMatchMediaQuery } from "@/hooks/viewports.hook";
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 
 const Channel = () => {
+  const isMobile = useMatchMediaQuery(device.mobile);
   return (
-    <Wrapper>
+    <Wrapper $isMobile={isMobile}>
       <div className="left">
         {/* <text>Hi</text> */}
         <img src="/bannerImages/5.svg" alt="" className="rocket" />
@@ -36,6 +39,7 @@ export default Channel;
 const Wrapper = styled.div`
   width: 90%;
   display: flex;
+  flex-direction: ${({ $isMobile }) => ($isMobile ? "column" : "row")};
   justify-content: center;
   align-items: center;
   /* background-color: ${colors.warning700}; */
@@ -79,7 +83,7 @@ const Wrapper = styled.div`
       border-radius: 50%;
       position: absolute;
       top: 5rem;
-      left: 8rem;
+      left: ${({ $isMobile }) => ($isMobile ? "3rem" : "8rem")}; //8rem;
     }
     .dot2 {
       padding: 0.5rem;
@@ -95,7 +99,7 @@ const Wrapper = styled.div`
       border-radius: 50%;
       position: absolute;
       top: 20rem;
-      left: 16rem;
+      left: ${({ $isMobile }) => ($isMobile ? "12rem" : "16rem")}; //16rem;
     }
     .dot4 {
       padding: 0.5rem;

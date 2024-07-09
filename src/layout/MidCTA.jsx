@@ -1,13 +1,16 @@
 import PrimaryButton from "@/components/buttons/PrimaryButton";
+import device from "@/constants/breakpoints";
 import colors from "@/constants/colors";
 import { event } from "@/constants/event";
 import fontSizes from "@/constants/fontSizes";
+import { useMatchMediaQuery } from "@/hooks/viewports.hook";
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 
 const MidCTA = () => {
+  const isMobile = useMatchMediaQuery(device.mobile);
   return (
-    <Wrapper>
+    <Wrapper $isMobile={isMobile}>
       <div className="left">
         <text>Get enough insights to refuel</text>
         <img src="/random/rocket.svg" alt="" className="rocket" />
@@ -36,6 +39,7 @@ export default MidCTA;
 const Wrapper = styled.div`
   width: 90%;
   display: flex;
+  flex-direction: ${({ $isMobile }) => ($isMobile ? "column" : "row")};
   justify-content: center;
   align-items: center;
   /* background-color: ${colors.warning700}; */
@@ -52,17 +56,19 @@ const Wrapper = styled.div`
     width: 100%;
     text {
       color: ${colors.gray500};
-      font-size: ${fontSizes.xxl};
+      font-size: ${({ $isMobile }) =>
+        $isMobile ? fontSizes.xl : fontSizes.xxl};
       font-weight: bold;
-      width: 250px;
+      width: ${({ $isMobile }) => ($isMobile ? "200px" : "250px")}; //250px;
     }
     .rocket {
       width: 150px;
       position: absolute;
-      top: 9rem;
+      top: ${({ $isMobile }) => ($isMobile ? "1rem" : "9rem")};
+      left: ${({ $isMobile }) => ($isMobile ? "14rem" : "15rem")};
       /* right: ; */
       /* bottom: 2rem; */
-      left: 15rem;
+      /* left: 15rem; */
     }
   }
   .right {
@@ -77,7 +83,7 @@ const Wrapper = styled.div`
     p {
       color: ${colors.gray500};
       font-weight: 300;
-      font-size: ${fontSizes.m};
+      font-size: ${({ $isMobile }) => ($isMobile ? fontSizes.s : fontSizes.m)};
     }
     .empha {
       width: 50px;
