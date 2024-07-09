@@ -20,6 +20,10 @@ import Share from "@/layout/Share";
 import Footer from "@/layout/Footer";
 import CountDown from "@/layout/CountDown";
 import DateTime from "@/layout/DateTime";
+import MidCTA from "@/layout/MidCTA";
+import BannerFix from "@/layout/BannerFix";
+import Channel from "@/layout/Channel";
+import BannerFixChat from "@/layout/BannerFixChat";
 
 const Home = () => {
   const [countdown, setCountdown] = useState("00:00:00");
@@ -70,12 +74,16 @@ const Home = () => {
     <Wrapper>
       {/* <DownloadFile /> */}
       <Navbar />
-      <Banner />
+      {/* <Banner /> */}
+      {/* <BannerFix /> */}
+      <BannerFixChat />
       <DateTime />
       <Speakers />
       <CountDown />
+      <MidCTA />
       <LuckyDipCorner />
       <Share />
+      <Channel />
       <Sponsors />
       <Footer />
     </Wrapper>

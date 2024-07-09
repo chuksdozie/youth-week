@@ -2,7 +2,7 @@ import "@/styles/globals.css";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import {
   Inter,
-  Alegreya_Sans,
+  // Alegreya_Sans,
   Montserrat_Alternates,
   Aclonica,
   Cairo_Play,

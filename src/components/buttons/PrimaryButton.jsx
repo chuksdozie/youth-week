@@ -21,4 +21,5 @@ const Wrapper = styled.div`
   padding: 1rem 2rem;
   border-radius: 50px;
   font-size: ${fontSizes.s};
+  cursor: pointer;
 `;

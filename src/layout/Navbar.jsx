@@ -1,12 +1,19 @@
 import PrimaryButton from "@/components/buttons/PrimaryButton";
+import device from "@/constants/breakpoints";
 import colors from "@/constants/colors";
+import { useMatchMediaQuery } from "@/hooks/viewports.hook";
 import React from "react";
 import styled from "styled-components";
 
 const Navbar = () => {
+  const isMobile = useMatchMediaQuery(device.mobile);
   return (
-    <NavContainer>
-      <img src="devchuks.png" alt="" style={{ height: "50px" }} />
+    <NavContainer $isMobile={isMobile}>
+      <img
+        src="devchuks.png"
+        alt=""
+        style={{ height: isMobile ? "40px" : "50px" }}
+      />
 
       <PrimaryButton text={"Book Event - It's Free"} />
       <img src="spotlight.png" alt="spotlight" className="spotlight" />
@@ -26,6 +33,8 @@ const NavContainer = styled.div`
   .spotlight {
     position: absolute;
     top: 0;
-    right: 150px;
+    right: 250px;
+    height: 150px;
+    display: ${({ $isMobile }) => $isMobile && "none"};
   }
 `;

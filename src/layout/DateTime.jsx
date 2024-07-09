@@ -13,7 +13,7 @@ const DateTime = () => {
         {/* <text>Days into Event:</text> */}
       </div>
       <div className="right">
-        <div>{event?.date}</div>
+        <div className="first">{event?.date}</div>
         <div>{event?.time}</div>
         <div>{event?.datem}</div>
         <div>{event?.datex}</div>
@@ -53,6 +53,8 @@ const Wrapper = styled.div`
     width: 100%;
     justify-content: center;
     padding: 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
     div {
       color: ${colors.gray900};
       font-size: ${fontSizes.m};
@@ -66,6 +68,9 @@ const Wrapper = styled.div`
       display: flex;
       justify-content: center;
       align-items: center;
+    }
+    .first {
+      background-color: rgba(255, 172, 103, 1);
     }
   }
 `;
