@@ -10,6 +10,20 @@ import { images } from "@/assets/photos";
 import { Gallery } from "react-grid-gallery";
 import { Carousel } from "react-responsive-carousel";
 import DownloadFile from "@/components/DownloadFile";
+import Navbar from "@/layout/Navbar";
+import Banner from "@/layout/Banner";
+import Speakers from "@/layout/Speakers";
+import colors from "@/constants/colors";
+import Sponsors from "@/layout/Sponsors";
+import LuckyDipCorner from "@/layout/LuckyDipCorner";
+import Share from "@/layout/Share";
+import Footer from "@/layout/Footer";
+import CountDown from "@/layout/CountDown";
+import DateTime from "@/layout/DateTime";
+import MidCTA from "@/layout/MidCTA";
+import BannerFix from "@/layout/BannerFix";
+import Channel from "@/layout/Channel";
+import BannerFixChat from "@/layout/BannerFixChat";
 
 const Home = () => {
   const [countdown, setCountdown] = useState("00:00:00");
@@ -18,7 +32,7 @@ const Home = () => {
   // const randomNumber = Math.floor(Math.random() * 100) + 1;
 
   useEffect(() => {
-    const eventDate = new Date("2023-05-08T00:00:00");
+    const eventDate = new Date("2024-08-08T00:00:00");
     const now = new Date().getTime();
     const distance = eventDate - now;
     const interval = setInterval(() => {
@@ -58,58 +72,20 @@ const Home = () => {
 
   return (
     <Wrapper>
-      <DownloadFile />
-      <div className="venue-container">
-        {/* with background image */}
-        <div className="spacer"></div>
-        <MdOutlineShareLocation className="icon" size={70} color="whitesmoke" />
-        <text className="theme">AYF Anniversary 2023</text>
-        <text className="theme">Youth With A Difference</text>
-        <text className="theme">Dan 1 : 8</text>
-        {/* <text className="theme-sub">GOSHEN CAMP</text> */}
-
-        <div className="spacer"></div>
-        <MdOutlineShareLocation className="icon" size={70} color="whitesmoke" />
-        <text className="theme">
-          St. Matthew&apos;s Anglican Church, Nkpogwu
-        </text>
-        <text className="theme">Port Harcourt</text>
-        <text className="theme-sub">GOSHEN CAMP</text>
-        <div className="spacer"></div>
-        <FaGamepad className="icon" size={70} color="whitesmoke" />
-        <text className="theme">Pick a Random Number</text>
-        <text className="number">{randomNumber}</text>
-        <button
-          onClick={() => setRandomNumber(Math.floor(Math.random() * 200) + 1)}
-        >
-          Generate New Number
-        </button>
-        {/* <div className="spacer"></div>
-        <div className="spacer"></div> */}
-        {/* <AiOutlinePicture className="icon" size={70} color="whitesmoke" /> */}
-        {/* <text className="theme">Event Gallery</text> */}
-        {/* <div className="spacer"></div> */}
-        {/* <ReactImageGallery items={images} infinite autoPlay /> */}
-        {/* <Gallery images={images} /> */}
-        {/* <Carousel>
-          <div>
-            <img src="https://picsum.photos/1018" />
-            <p className="legend">Legend 1</p>
-          </div>
-          <div>
-            <img src="https://picsum.photos/1018" />
-            <p className="legend">Legend 2</p>
-          </div>
-          <div>
-            <img src="https://picsum.photos/1018" />
-            <p className="legend">Legend 3</p>
-          </div>
-        </Carousel> */}
-        <div className="spacer"></div>
-        {/* <MdOutlineLocalActivity className="icon" size={70} color="whitesmoke" /> */}
-        {/* <text className="theme">Activities for the Week</text> */}
-        {/* <EventLineUp /> */}
-      </div>
+      {/* <DownloadFile /> */}
+      <Navbar />
+      {/* <Banner /> */}
+      {/* <BannerFix /> */}
+      <BannerFixChat />
+      <DateTime />
+      <Speakers />
+      <CountDown />
+      <MidCTA />
+      <LuckyDipCorner />
+      <Share />
+      <Channel />
+      <Sponsors />
+      <Footer />
     </Wrapper>
   );
 };
@@ -117,9 +93,12 @@ const Home = () => {
 export default Home;
 
 const Wrapper = styled.div`
-  width: 100%;
+  width: 100vw;
   min-height: 100vh;
-  background-color: #130c00;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
   .header-container {
     background-color: red;
