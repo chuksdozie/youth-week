@@ -7,6 +7,9 @@ import {
   Aclonica,
   Cairo_Play,
 } from "next/font/google";
+import { useEffect, useState } from "react";
+import { useRouter } from "next/router";
+import PageLoader from "@/layout/PageLoader";
 const inter = Inter({ subsets: ["latin"] });
 const intern = Cairo_Play({
   subsets: ["latin"],
@@ -25,9 +28,29 @@ const internx = Montserrat_Alternates({
 });
 
 export default function App({ Component, pageProps }) {
+  const [loading, setLoading] = useState(true);
+  const router = useRouter();
+
+  useEffect(() => {
+    const handleRouteChangeStart = () => setLoading(true);
+    const handleRouteChangeComplete = () => setLoading(false);
+
+    router.events.on("routeChangeStart", handleRouteChangeStart);
+    router.events.on("routeChangeComplete", handleRouteChangeComplete);
+    router.events.on("routeChangeError", handleRouteChangeComplete);
+
+    // Set loading to false initially
+    setLoading(false);
+
+    return () => {
+      router.events.off("routeChangeStart", handleRouteChangeStart);
+      router.events.off("routeChangeComplete", handleRouteChangeComplete);
+      router.events.off("routeChangeError", handleRouteChangeComplete);
+    };
+  }, []);
   return (
     <main className={intern.className}>
-      <Component {...pageProps} />
+      {loading ? <PageLoader /> : <Component {...pageProps} />}
     </main>
   );
 }
