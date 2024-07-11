@@ -3,6 +3,7 @@ import colors from "@/constants/colors";
 import { event } from "@/constants/event";
 import fontSizes from "@/constants/fontSizes";
 import React, { useEffect, useState } from "react";
+import { FaVideo, FaYoutube } from "react-icons/fa";
 import styled from "styled-components";
 
 const DateTime = () => {
@@ -15,8 +16,14 @@ const DateTime = () => {
       <div className="right">
         <div className="first">{event?.date}</div>
         <div>{event?.time}</div>
-        <div>{event?.datem}</div>
-        <div>{event?.datex}</div>
+        <div>
+          <FaYoutube size={30} className="youtube" color={colors.error600} />
+          {event?.venue}
+        </div>
+        <div>
+          <FaVideo size={25} className="youtube" color={colors.primary600} />
+          {event?.datex}
+        </div>
       </div>
     </Wrapper>
   );
@@ -36,6 +43,9 @@ const Wrapper = styled.div`
   gap: 2rem;
   /* height: 500px; */
   padding: 4rem 0.5rem 2rem;
+  .youtube {
+    margin: 0 0.3rem;
+  }
   .left {
     display: flex;
     flex-direction: column;
