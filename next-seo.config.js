@@ -10,22 +10,22 @@ export default {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://www.timeout-event.com/", // Replace with your event's URL
+    url: "https://timeout.devchuks.com/", // Replace with your event's URL
     title,
     description,
     images: [
       {
-        url: "https://www.timeout-event.com/banner.jpg", // Replace with your event's banner image URL
+        url: "https://ik.imagekit.io/akf2tcskl/Time%20Out/Timeout_qXulQ4FIC.jpg?updatedAt=1720692561774", // Replace with your event's banner image URL
         width: 800,
-        height: 600,
+        height: 800,
         alt: "Timeout Event Banner",
       },
     ],
     site_name: "Timeout Event",
   },
   twitter: {
-    handle: "@timeout_event", // Replace with your Twitter handle
-    site: "@timeout_event",
-    cardType: "summary_large_image",
+    // handle: "@timeout_event", // Replace with your Twitter handle
+    // site: "@timeout_event",
+    // cardType: "summary_large_image",
   },
 };
