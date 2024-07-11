@@ -10,6 +10,8 @@ import {
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import PageLoader from "@/layout/PageLoader";
+import { DefaultSeo } from "next-seo";
+import SEO from "../../next-seo.config";
 const inter = Inter({ subsets: ["latin"] });
 const intern = Cairo_Play({
   subsets: ["latin"],
@@ -50,6 +52,7 @@ export default function App({ Component, pageProps }) {
   }, []);
   return (
     <main className={intern.className}>
+      <DefaultSeo {...SEO} />
       {loading ? <PageLoader /> : <Component {...pageProps} />}
     </main>
   );
