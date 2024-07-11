@@ -13,7 +13,7 @@ const Share = () => {
     <Wrapper $isMobile={isMobile}>
       <div className="left">
         <text>Hi</text>
-        <img src="/random/hi.svg" alt="" className="rocket" />
+        <img src="/random/hi.png" alt="" className="rocket" />
         <div className="dot1"></div>
         <div className="dot2"></div>
         <div className="dot3"></div>

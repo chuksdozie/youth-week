@@ -13,12 +13,12 @@ const LuckyDipCorner = () => {
   return (
     <Wrapper $isMobile={isMobile}>
       <div className="back"></div>
-      <img src="/random/baloons.svg" alt="" className="baloon" />
+      <img src="/random/baloons.png" alt="" className="baloon" />
       <h4>Lucky Corner</h4>
       <p>There is some fun also at the event.</p>
       <p>Get ready for some fun! Someone is going to be lucky at the event.</p>
       <div className="lucky">
-        <img src="/random/lucky.svg" alt="" style={{ height: "100%" }} />
+        <img src="/random/lucky.png" alt="" style={{ height: "100%" }} />
         <text className="number">{randomNumber}</text>
       </div>
       {/* <FaGamepad className="icon" size={70} color="whitesmoke" />
