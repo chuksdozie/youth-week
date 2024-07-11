@@ -28,7 +28,7 @@ const BannerFixChat = () => {
       )}
       <Image
         // x
-        src="/random/banner.svg"
+        src="/random/banner.png"
         alt="Banner"
         // fill
         width={isMobile ? 800 : 1920}
