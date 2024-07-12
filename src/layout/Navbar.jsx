@@ -1,7 +1,9 @@
 import PrimaryButton from "@/components/buttons/PrimaryButton";
 import device from "@/constants/breakpoints";
 import colors from "@/constants/colors";
+import { links } from "@/constants/links";
 import { useMatchMediaQuery } from "@/hooks/viewports.hook";
+import Link from "next/link";
 import React from "react";
 import styled from "styled-components";
 
@@ -14,8 +16,10 @@ const Navbar = () => {
         alt=""
         style={{ height: isMobile ? "40px" : "50px" }}
       />
+      <Link href={links.register} target="_blank">
+        <PrimaryButton text={"Book Event - It's Free"} />
+      </Link>
 
-      <PrimaryButton text={"Book Event - It's Free"} />
       <img src="spotlight.png" alt="spotlight" className="spotlight" />
     </NavContainer>
   );

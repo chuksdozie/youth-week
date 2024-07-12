@@ -86,6 +86,16 @@ const Home = () => {
       <Channel />
       <Sponsors />
       <Footer />
+      {/* <iframe
+        src="https://docs.google.com/forms/d/e/1FAIpQLSdj6TcBRqLrflgezybv_YA4hfrMlYvkIgi9HpXvtw10Qz2Dhw/viewform?embedded=true"
+        width="640"
+        height="1743"
+        frameborder="0"
+        marginheight="0"
+        marginwidth="0"
+      >
+        sjfkcihkdf,nbjfsmdfnkjsdfnbcmnd
+      </iframe> */}
     </Wrapper>
   );
 };

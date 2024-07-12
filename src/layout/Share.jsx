@@ -3,9 +3,58 @@ import device from "@/constants/breakpoints";
 import colors from "@/constants/colors";
 import { event } from "@/constants/event";
 import fontSizes from "@/constants/fontSizes";
+import { links } from "@/constants/links";
 import { useMatchMediaQuery } from "@/hooks/viewports.hook";
+import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
+import {
+  EmailShareButton,
+  FacebookShareButton,
+  GabShareButton,
+  HatenaShareButton,
+  InstapaperShareButton,
+  LineShareButton,
+  LinkedinShareButton,
+  LivejournalShareButton,
+  MailruShareButton,
+  OKShareButton,
+  PinterestShareButton,
+  PocketShareButton,
+  RedditShareButton,
+  TelegramShareButton,
+  TumblrShareButton,
+  TwitterShareButton,
+  ViberShareButton,
+  VKShareButton,
+  WhatsappShareButton,
+  WorkplaceShareButton,
+} from "react-share";
+import {
+  EmailIcon,
+  FacebookIcon,
+  FacebookMessengerIcon,
+  GabIcon,
+  HatenaIcon,
+  InstapaperIcon,
+  LineIcon,
+  LinkedinIcon,
+  LivejournalIcon,
+  MailruIcon,
+  OKIcon,
+  PinterestIcon,
+  PocketIcon,
+  RedditIcon,
+  TelegramIcon,
+  TumblrIcon,
+  TwitterIcon,
+  ViberIcon,
+  VKIcon,
+  WeiboIcon,
+  WhatsappIcon,
+  WorkplaceIcon,
+  XIcon,
+} from "react-share";
 
 const Share = () => {
   const isMobile = useMatchMediaQuery(device.mobile);
@@ -28,8 +77,23 @@ const Share = () => {
         <p>
           {`By sharing this event, you contribute to a global movement that recognizes and amplifies the voices of African tech talents. Let’s come together to celebrate and empower the next generation of innovators!`}
         </p>
-
-        <PrimaryButton text="Share The Excitement" />
+        {/* <Link href={links.channel} target="_blank">
+          <PrimaryButton text="Share The Excitement" />
+        </Link> */}
+        <div className="icons">
+          <WhatsappShareButton url={links.timeout} title="ytjgk">
+            <WhatsappIcon round size={35} />
+          </WhatsappShareButton>
+          <TwitterShareButton url={links.timeout} title="ytjgk">
+            <XIcon round size={35} />
+          </TwitterShareButton>
+          <LinkedinShareButton url={links.timeout} title="ytjgk">
+            <LinkedinIcon round size={35} />
+          </LinkedinShareButton>
+          <FacebookShareButton url={links.timeout} title="ytjgk">
+            <FacebookIcon round size={35} />
+          </FacebookShareButton>
+        </div>
         <img src="/random/empha.svg" alt="" className="empha" />
       </div>
     </Wrapper>
@@ -122,6 +186,13 @@ const Wrapper = styled.div`
     justify-content: center;
     padding: 1.5rem;
     position: relative;
+    .icons {
+      /* background-color: red; */
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+      width: 200px;
+    }
     p {
       color: ${colors.gray500};
       font-weight: 300;

@@ -3,7 +3,9 @@ import device from "@/constants/breakpoints";
 import colors from "@/constants/colors";
 import { event } from "@/constants/event";
 import fontSizes from "@/constants/fontSizes";
+import { links } from "@/constants/links";
 import { useMatchMediaQuery } from "@/hooks/viewports.hook";
+import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 
@@ -27,7 +29,9 @@ const MidCTA = () => {
           ecosystem that the world has yet to fully recognize?
         </p>
         <p className="catch">Let&apos;s find out together.</p>
-        <PrimaryButton text="Book Event - It's Free" />
+        <Link href={links.register} target="_blank">
+          <PrimaryButton text="Book Event - It's Free" />
+        </Link>
         <img src="/random/empha.svg" alt="" className="empha" />
       </div>
     </Wrapper>

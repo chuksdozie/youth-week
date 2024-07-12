@@ -3,7 +3,9 @@ import device from "@/constants/breakpoints";
 import colors from "@/constants/colors";
 import { event } from "@/constants/event";
 import fontSizes from "@/constants/fontSizes";
+import { links } from "@/constants/links";
 import { useMatchMediaQuery } from "@/hooks/viewports.hook";
+import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 
@@ -26,8 +28,10 @@ const Channel = () => {
           {`Are you passionate about technology, coding, and innovation? Do you want to be part of a vibrant community of developers, tech enthusiasts, and industry experts? Then "Dev Chuks" is the place for you!`}
         </p>
         <p>Let&apos;s innovate, collaborate, and grow together! 🚀</p>
+        <Link href={links.channel} target="_blank">
+          <PrimaryButton text="Join Dev Chuks" />
+        </Link>
 
-        <PrimaryButton text="Join Dev Chuks" />
         <img src="/random/empha.svg" alt="" className="empha" />
       </div>
     </Wrapper>

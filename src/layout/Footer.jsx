@@ -2,7 +2,9 @@ import PrimaryButton from "@/components/buttons/PrimaryButton";
 import device from "@/constants/breakpoints";
 import colors from "@/constants/colors";
 import fontSizes from "@/constants/fontSizes";
+import { links } from "@/constants/links";
 import { useMatchMediaQuery } from "@/hooks/viewports.hook";
+import Link from "next/link";
 import React from "react";
 import { FaTiktok, FaWhatsapp } from "react-icons/fa";
 import styled from "styled-components";
@@ -12,19 +14,34 @@ const Footer = () => {
   return (
     <Wrapper $isMobile={isMobile}>
       <div>
-        <p>Book Event</p>
-        <p>Become a Sub-Speaker</p>
-        <p>Become a Sponsor</p>
+        <Link href={links.register} target="_blank">
+          <p>Book Event</p>
+        </Link>
+        <Link href={links.sub_speaker} target="_blank">
+          <p>Become a Sub-Speaker</p>
+        </Link>
+        <Link href={links.sponsor} target="_blank">
+          <p>Become a Sponsor</p>
+        </Link>
+        {/* <Link href={links.register} target="_blank"></Link> */}
       </div>
       <div>
-        <p>Give a Feedback</p>
-        <p>Join Dev Chuks Whatsapp Channel 🎉</p>
+        <Link href={links.feedback} target="_blank">
+          <p>Give a Feedback</p>
+        </Link>
+        <Link href={links.channel} target="_blank">
+          <p>Join Dev Chuks Whatsapp Channel 🎉</p>
+        </Link>
       </div>
       <div>
         <span>
           <p>
-            <FaWhatsapp size={25} className="icon" />
-            <FaTiktok size={25} className="icon" />
+            <Link href={links.channel} target="_blank">
+              <FaWhatsapp size={25} className="icon" />
+            </Link>
+            <Link href={links.tiktok} target="_blank">
+              <FaTiktok size={25} className="icon" />
+            </Link>
           </p>
         </span>
         <h6>&copy; 2024 Dev Chuks. All rights reserved.</h6>

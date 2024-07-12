@@ -3,7 +3,9 @@ import device from "@/constants/breakpoints";
 import colors from "@/constants/colors";
 import { speakers } from "@/constants/event";
 import fontSizes from "@/constants/fontSizes";
+import { links } from "@/constants/links";
 import { useMatchMediaQuery } from "@/hooks/viewports.hook";
+import Link from "next/link";
 import React from "react";
 import styled from "styled-components";
 
@@ -30,7 +32,9 @@ const Speakers = () => {
           </div>
         </div>
       ))}
-      <PrimaryButton text={"Become A Sub-Speaker"} />
+      <Link href={links.sub_speaker} target="_blank">
+        <PrimaryButton text={"Become A Sub-Speaker"} />
+      </Link>
       <p className="subnote">
         Please note that each sub speaker will have a very short speaking slot
         to share their insights.
