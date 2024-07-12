@@ -25,7 +25,7 @@ const Speakers = () => {
           </div>
 
           <div>
-            <p className="name">{item?.title}</p>
+            <p className="title">{item?.title}</p>
             {item?.company && <p className="company">{item?.company}</p>}
             <p>{item?.details}</p>
             {/* <p>daoa sdkajsdcas djashdas</p> */}
@@ -92,6 +92,14 @@ const Wrapper = styled.div`
       font-weight: 600;
       font-size: ${fontSizes.m};
       margin-bottom: 0.5rem;
+      /* background-color: orange; */
+      text-align: ${({ isMobile }) => (isMobile ? "center" : "center")};
+    }
+    .title {
+      font-weight: 600;
+      font-size: ${fontSizes.m};
+      margin-bottom: 0.5rem;
+      /* background-color: orange; */
       text-align: ${({ isMobile }) => (isMobile ? "center" : "flex-start")};
     }
     .company {
@@ -124,6 +132,7 @@ const Wrapper = styled.div`
       /* background-color: orange; */
       font-size: ${fontSizes.s};
       padding: 0.5rem;
+      width: 250px;
     }
   }
 `;
