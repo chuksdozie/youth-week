@@ -1,6 +1,8 @@
 import PrimaryButton from "@/components/buttons/PrimaryButton";
 import colors from "@/constants/colors";
 import fontSizes from "@/constants/fontSizes";
+import { links } from "@/constants/links";
+import Link from "next/link";
 import React from "react";
 import styled from "styled-components";
 
@@ -15,8 +17,9 @@ const Sponsors = () => {
         {/* <h1>Logo Parade Comes Here</h1> */}
         {/* <h1>Logo Parade Comes Here</h1> */}
       </div>
-
-      <PrimaryButton text={"Become A Sponsor"} />
+      <Link href={links.sponsor} target="_blank">
+        <PrimaryButton text={"Become A Sponsor"} />
+      </Link>
     </Wrapper>
   );
 };
