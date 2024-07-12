@@ -34,7 +34,7 @@ Hobbies: Gaming, Movies, Research`,
     title: "⁠Senior Software Engineer",
     company: "",
     details:
-      "Senior software engineer with over 5 years of experience in the tech industry. Holds a Bachelor's degree in Computer Science from the University of Nigeria. Specializes in Full-stack development, leading teams to develop and deploy robust applications.  Thrives in dynamic environments, leveraging skills in problem-solving, architectural design, and team collaboration to deliver innovative solutions.",
+      "Senior software engineer with over 5 years of experience in the tech industry. Holds a Bachelor's degree in Computer Science from the University of Nigeria. Specializes in Full-stack development, leading teams to develop and deploy robust applications.  Has served as lead engineer in several startups and thrives in dynamic environments, leveraging skills in problem-solving, architectural design, and team collaboration to deliver innovative solutions.",
   },
   {
     pic: "/speakers/Tochi.jpg",
