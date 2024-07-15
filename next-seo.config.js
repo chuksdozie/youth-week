@@ -15,7 +15,7 @@ export default {
     description,
     images: [
       {
-        url: "https://ik.imagekit.io/akf2tcskl/Time%20Out/Timeout_qXulQ4FIC.jpg?updatedAt=1720692561774", // Replace with your event's banner image URL
+        url: "https://ik.imagekit.io/akf2tcskl/Time%20Out/Timeout_qXulQ4FIC.jpg?updatedAt=1721033262119", // Replace with your event's banner image URL
         width: 800,
         height: 800,
         alt: "Timeout Event Banner",
