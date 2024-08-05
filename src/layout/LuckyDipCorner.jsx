@@ -4,12 +4,23 @@ import colors from "@/constants/colors";
 import fontSizes from "@/constants/fontSizes";
 import { useMatchMediaQuery } from "@/hooks/viewports.hook";
 import React, { useState } from "react";
-import { FaGamepad } from "react-icons/fa";
+import { FaCode, FaGamepad } from "react-icons/fa";
 import styled from "styled-components";
+import PageLoader from "./PageLoader";
 
 const LuckyDipCorner = () => {
   const isMobile = useMatchMediaQuery(device.mobile);
   const [randomNumber, setRandomNumber] = useState(0);
+  const [loading, setLoading] = useState(false);
+
+  const generateRandomNumber = () => {
+    setLoading(true);
+    setTimeout(() => {
+      setRandomNumber(Math.floor(Math.random() * 200) + 1);
+      setLoading(false);
+    }, 6000); // Adjust the delay as needed
+  };
+
   return (
     <Wrapper $isMobile={isMobile}>
       <div className="back"></div>
@@ -19,13 +30,17 @@ const LuckyDipCorner = () => {
       <p>Get ready for some fun! Someone is going to be lucky at the event.</p>
       <div className="lucky">
         <img src="/random/lucky.png" alt="" style={{ height: "100%" }} />
-        <text className="number">{randomNumber}</text>
+        {loading ? (
+          <FaCode color={colors.warning600} size={100} className="throbbing" />
+        ) : (
+          <text className="number">{randomNumber}</text>
+        )}
       </div>
       {/* <FaGamepad className="icon" size={70} color="whitesmoke" />
       <text className="theme">Pick a Random Number</text> */}
 
       <PrimaryButton
-        onClick={() => setRandomNumber(Math.floor(Math.random() * 200) + 1)}
+        onClick={() => generateRandomNumber()}
         text={"Generate New Number"}
       />
     </Wrapper>
@@ -87,6 +102,28 @@ const Wrapper = styled.div`
       /* top: 100px; */
       color: ${colors.gray500};
       /* font-size: ${fontSizes.xxxl}; */
+    }
+    .throbbing {
+      /* display: inline-block; */
+      position: absolute;
+      width: 70px;
+      height: 70px;
+      /* background-color: #123abc; */
+      border-radius: 50%;
+      animation: throb 1.5s infinite;
+      /* z-index: 50; */
+    }
+
+    @keyframes throb {
+      0%,
+      100% {
+        transform: scale(1);
+        opacity: 1;
+      }
+      50% {
+        transform: scale(1.5);
+        opacity: 0.7;
+      }
     }
   }
   .ctagroup {

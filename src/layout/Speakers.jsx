@@ -114,6 +114,7 @@ const Wrapper = styled.div`
       width: 120px;
       background-color: brown;
       border-radius: 50%;
+      /* object-fit: cover; */
       /* border: 5px solid rgba(241, 162, 42, 0.6); */
     }
     div {

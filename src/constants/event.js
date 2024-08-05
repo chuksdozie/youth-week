@@ -44,4 +44,14 @@ Hobbies: Gaming, Movies, Research`,
       "Experienced DevOps engineer and AWS Subject Matter Expert, adept at architecting, planning, and building AWS cloud-native products. Specialized in automating workflows and optimizing software pipelines. Proficient in AWS, Docker, Jenkins, Terraform, Kubernetes, and cloud-native serverless technologies. Dedicated to helping organizations embrace innovative DevOps practices.",
     // details: "jhgdf jgdcgvh",
   },
+  {
+    pic: "/speakers/yemi.jpg",
+    name: "Yemi Akinyemi",
+    title: "Software Engineer",
+    company: "Moderator",
+    details: `Yemi graduated with a Bachelor’s of Science from the University of Ilorin, but her pursuit for personal fulfillment led her to the tech industry. She quickly developed a passion for frontend development and took several courses and built different projects to enhance the skills she had acquired. Yemi gained invaluable experience through internships, including the prestigious HNG and BuildNext programs, which were pivotal in launching her career. After gaining some experience as a freelancer, she was offered her first full-time role as a Frontend Engineer. Because growth was very important to her, she transitioned to a new role as a Fullstack Software Engineer.
+
+She currently works as a software engineer using the MERN stack, and she finds it to be a challenging but amazing journey. Yemi looks forward to expanding her horizons and exploring more opportunities as they arise.`,
+    // details: "jhgdf jgdcgvh",
+  },
 ];
